@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">Nemotec</string>
+    <string name="juegacomo">Juega como</string>
+    <string name="nombre">Nombre</string>
+    <string name="slogan">Juega para ganar</string>
+    <string name="iniciar">Iniciar</string>
+    <string name="logo">Logo de Nemotec</string>
+    <string name="p1">Pregunta 1</string>
+    <string name="preg1">¿Cuál es la capital de Bélgica</string>
+    <string name="p1_a">Hamburgo</string>
+    <string name="p1_b">Bruselas</string>
+    <string name="correcto">Correcto!</string>
+    <string name="mal">Mmm, eso estuvo mal</string>
+    <string name="p2">Pregunta 2</string>
+    <string name="p3">Pregunta 3</string>
+    <string name="p4">Pregunta 4</string>
+    <string name="p5">Pregunta 5</string>
+    <string name="preg2">¿Cómo se apellida el inventor del Teléfono?</string>
+    <string name="preg3">¿Quiénes fueron los hermanos que lograron el primer vuelo exitoso?</string>
+    <string name="preg4">¿Cómo se llama el creador del Internet?</string>
+    <string name="preg5">El fundador de la marca de coches Pagani es</string>
+    <string name="p2_a">Marconi</string>
+    <string name="p2_b">Graham Bell</string>
+    <string name="p3_a">Wright</string>
+    <string name="p3_b">Woodston</string>
+    <string name="p4_a">Tim Berners Lee</string>
+    <string name="p4_b">Michael Rodegard</string>
+    <string name="p5_a">Italiano</string>
+    <string name="p5_b">Argentino</string>
+    <string name="image_brus">Imagen de Bruselas</string>
+    <string name="image_tel">Imagen de un teléfono</string>
+    <string name="image_wright">Imagen de los hermanos Wright</string>
+    <string name="image_pagani">Imagen de un Pagani</string>
+    <string name="image_internet">Imagen de Internet</string>
+    <string name="regresar">Regresar al inicio</string>
+    <string name="gracias">Gracias por participar en Nemotec!</string>
+    <string name="image_n">Imagen de N</string>
+    <string name="numero1">Número 1</string>
+    <string name="numero2">Número 2</string>
+    <string name="x">X</string>
+    <string name="mas">+</string>
+    <string name="div">/</string>
+    <string name="minus">-</string>
+    <string name="igual">=</string>
+    <string name="calcnemo">Calculadora Nemotec</string>
+
+
+</resources>
