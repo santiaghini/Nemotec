@@ -43,6 +43,7 @@
     <string name="minus">-</string>
     <string name="igual">=</string>
     <string name="calcnemo">Calculadora Nemotec</string>
+    <string name="sig">Siguiente</string>
 
 
 </resources>

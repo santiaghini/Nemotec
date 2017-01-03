@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 public class P1Activity extends AppCompatActivity {
 
-    int paginaActual = 1;
+    int preguntaActual = 1;
     float b = 2.5f;
     ArrayList<String> listapreguntas = new ArrayList<String>();
 
@@ -22,7 +22,7 @@ public class P1Activity extends AppCompatActivity {
         String name = getIntent().getStringExtra("name");
         Toast toast = Toast.makeText(getApplicationContext(),"Iniciaste como "+name,9);
         toast.show();
-        paginaActual = paginaActual+1;
+        preguntaActual = preguntaActual+1;
         b = b - 1.00f;
         listapreguntas.add(getString(R.string.preg1));
         listapreguntas.add(getString(R.string.preg2));
@@ -30,6 +30,16 @@ public class P1Activity extends AppCompatActivity {
         listapreguntas.add(getString(R.string.preg4));
         listapreguntas.add(getString(R.string.preg5));
     }
+
+
+    protected void 
+
+
+
+
+
+
+
 
     protected void irA2(View view) {
         Intent intent = new Intent(P1Activity.this, P2Activity.class);
