@@ -31,7 +31,6 @@ public class P1Activity extends AppCompatActivity {
         listapreguntas.add(getString(R.string.preg5));
     }
 
-
     protected void
 
 
