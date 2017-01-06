@@ -39,7 +39,6 @@ public class P1Activity extends AppCompatActivity {
 
 
 
-
     protected void irA2(View view) {
         Intent intent = new Intent(P1Activity.this, P2Activity.class);
         startActivity(intent);
