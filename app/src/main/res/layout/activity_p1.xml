@@ -43,10 +43,9 @@
         android:layout_marginStart="16dp"
         app:layout_constraintLeft_toLeftOf="parent"
         android:contentDescription="@string/image_brus"
-        app:layout_constraintHorizontal_bias="0.85"
+        app:layout_constraintHorizontal_bias="0.0"
         android:layout_width="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/p1_b"
-        android:layout_marginBottom="48dp" />
+        app:layout_constraintBottom_toTopOf="@+id/p1_b" />
 
     <Button
         android:text="@string/p1_a"
@@ -55,7 +54,6 @@
         android:id="@+id/p1_a"
         android:visibility="visible"
         android:onClick="regresaruno"
-        android:layout_marginTop="48dp"
         app:layout_constraintTop_toBottomOf="@+id/p1_image"
         android:layout_marginStart="56dp"
         app:layout_constraintLeft_toLeftOf="parent" />
@@ -72,8 +70,7 @@
         android:layout_marginStart="8dp"
         app:layout_constraintLeft_toRightOf="@+id/p1_a"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="96dp"
-        app:layout_constraintHorizontal_bias="0.62" />
+        android:layout_marginBottom="80dp" />
 
     <Button
         android:text="@string/sig"
@@ -84,12 +81,14 @@
         app:layout_constraintTop_toBottomOf="@+id/p1_a"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginBottom="16dp"
-        app:layout_constraintVertical_bias="0.6"
+        app:layout_constraintVertical_bias="0.66"
         android:layout_marginEnd="32dp"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginStart="8dp"
         app:layout_constraintLeft_toRightOf="@+id/p1_botonatras"
-        app:layout_constraintHorizontal_bias="0.78" />
+        app:layout_constraintHorizontal_bias="0.55"
+        android:onClick="nextQ"
+        android:visibility="visible" />
 
     <Button
         android:text="@string/atras"
@@ -101,5 +100,7 @@
         android:layout_marginTop="32dp"
         app:layout_constraintTop_toBottomOf="@+id/p1_a"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="16dp" />
+        android:layout_marginBottom="16dp"
+        android:visibility="visible"
+        android:onClick="prevQ" />
 </android.support.constraint.ConstraintLayout>
