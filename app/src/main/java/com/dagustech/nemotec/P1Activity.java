@@ -77,7 +77,7 @@ public class P1Activity extends AppCompatActivity {
 
 
     protected void nextQ (View view) {
-        preguntaActual = preguntaActual+1;
+        preguntaActual = preguntaActual == 0 ? listatits.size() - 1 : preguntaActual - 1 ;
         tit.setText(listatits.get(preguntaActual));
         preg.setText(listapreguntas.get(preguntaActual));
         opcA.setText(listaopca.get(preguntaActual));
@@ -88,7 +88,7 @@ public class P1Activity extends AppCompatActivity {
 
 
     protected void prevQ (View view) {
-        preguntaActual = preguntaActual-1;
+        preguntaActual = preguntaActual + 1 < listatits.size() ? preguntaActual + 1 : 0 ;
         tit.setText(listatits.get(preguntaActual));
         preg.setText(listapreguntas.get(preguntaActual));
         opcA.setText(listaopca.get(preguntaActual));
