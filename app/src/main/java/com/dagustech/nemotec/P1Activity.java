@@ -5,7 +5,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -15,31 +14,34 @@ import java.util.ArrayList;
 public class P1Activity extends AppCompatActivity {
 
     int preguntaActual = 0;
-    float b = 2.5f;
     ArrayList<String> listapreguntas = new ArrayList<String>();
     ArrayList<String> listatits = new ArrayList<String>();
     ArrayList<String> listaopca = new ArrayList<String>();
     ArrayList<String> listaopcb = new ArrayList<String>();
     ArrayList<Integer> listaimages = new ArrayList<Integer>();
 
-    Button opcA = (Button) findViewById(R.id.p1_a);
-    Button opcB = (Button) findViewById(R.id.p1_b);
-    TextView tit = (TextView) findViewById(R.id.p1_texttitulo);
-    TextView preg = (TextView) findViewById(R.id.p1_textpreg);
-    ImageView image = (ImageView) findViewById(R.id.p1_image);
-    Button atras = (Button) findViewById(R.id.p1_botonatras);
-    Button sig = (Button) findViewById(R.id.p1_botonsig);
-
+    Button opcA;
+    Button opcB;
+    TextView tit;
+    TextView preg;
+    ImageView image;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_p1);
+
+        opcA = (Button) findViewById(R.id.p1_a);
+        opcB = (Button) findViewById(R.id.p1_b);
+        tit = (TextView) findViewById(R.id.p1_texttitulo);
+        preg = (TextView) findViewById(R.id.p1_textpreg);
+        image = (ImageView) findViewById(R.id.p1_image);
+
         String name = getIntent().getStringExtra("name");
-        Toast toast = Toast.makeText(getApplicationContext(),"Iniciaste como "+name,9);
+        Toast toast = Toast.makeText(getApplicationContext(),"Iniciaste como "+name,Toast.LENGTH_LONG);
         toast.show();
-        b = b - 1.00f;
+
 
         listapreguntas.add(getString(R.string.preg1)); //0
         listapreguntas.add(getString(R.string.preg2)); //1
