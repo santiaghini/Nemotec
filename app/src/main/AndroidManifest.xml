@@ -22,7 +22,8 @@
         <activity android:name=".P4Activity" />
         <activity android:name=".P5Activity" />
         <activity android:name=".EndActivity" />
-        <activity android:name=".CalcActivity"></activity>
+        <activity android:name=".CalcActivity" />
+        <activity android:name=".PruebaActivity"></activity>
     </application>
 
 </manifest>

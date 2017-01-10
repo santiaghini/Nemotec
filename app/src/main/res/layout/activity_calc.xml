@@ -41,13 +41,13 @@
         android:layout_height="wrap_content"
         android:id="@+id/button12"
         android:onClick="sumar"
-        app:layout_constraintRight_toLeftOf="@+id/button13"
-        android:layout_marginEnd="72dp"
         android:layout_marginStart="16dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintRight_toLeftOf="@+id/button13"
+        android:layout_marginEnd="8dp"
         app:layout_constraintBottom_toTopOf="@+id/button14"
-        android:layout_marginBottom="40dp" />
+        android:layout_marginBottom="40dp"
+        app:layout_constraintHorizontal_bias="0.45" />
 
     <Button
         android:text="@string/minus"
@@ -57,11 +57,8 @@
         android:onClick="restar"
         android:layout_marginEnd="48dp"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/button15"
-        android:layout_marginBottom="40dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/calc_edtnum2"
-        app:layout_constraintVertical_bias="0.85" />
+        android:layout_marginTop="48dp"
+        app:layout_constraintTop_toBottomOf="@+id/calc_edtnum2" />
 
     <Button
         android:text="@string/x"
@@ -72,7 +69,10 @@
         android:layout_marginStart="56dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="104dp" />
+        android:layout_marginBottom="104dp"
+        app:layout_constraintRight_toLeftOf="@+id/button15"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintHorizontal_bias="0.19" />
 
     <Button
         android:text="@string/div"
@@ -84,9 +84,9 @@
         android:layout_marginBottom="104dp"
         android:layout_marginEnd="48dp"
         app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginStart="8dp"
-        app:layout_constraintLeft_toRightOf="@+id/button14"
-        app:layout_constraintHorizontal_bias="0.97" />
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/button13"
+        app:layout_constraintVertical_bias="0.84000003" />
 
     <TextView
         android:text="@string/calcnemo"

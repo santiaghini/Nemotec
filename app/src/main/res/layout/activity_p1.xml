@@ -12,8 +12,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/p1_texttitulo"
-        tools:layout_editor_absoluteY="24dp"
-        tools:layout_editor_absoluteX="54dp" />
+        android:layout_marginStart="40dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:text="@string/preg1"
@@ -29,18 +31,18 @@
         app:layout_constraintHorizontal_bias="0.53" />
 
     <ImageView
-        android:layout_height="235dp"
+        android:layout_height="wrap_content"
         app:srcCompat="@drawable/bruselas"
         android:id="@+id/p1_image"
         android:contentDescription="@string/image_brus"
-        android:layout_width="317dp"
+        android:layout_width="wrap_content"
         android:layout_marginStart="16dp"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginEnd="16dp"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginTop="8dp"
         app:layout_constraintTop_toBottomOf="@+id/p1_textpreg"
-        app:layout_constraintBottom_toTopOf="@+id/p1_radio1"
+        app:layout_constraintBottom_toTopOf="@+id/p1_radiogroup"
         android:layout_marginBottom="8dp" />
 
     <Button
@@ -71,31 +73,34 @@
         android:visibility="visible"
         android:onClick="prevQ" />
 
-    <RadioButton
-        android:text="@string/p1_a"
-        android:layout_width="wrap_content"
+    <RadioGroup
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:id="@+id/p1_radio1"
-        android:layout_marginStart="56dp"
+        android:orientation="horizontal"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/p1_botonatras"
-        android:layout_marginBottom="48dp" />
-
-    <RadioButton
-        android:text="@string/p1_b"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/p1_radio2"
-        android:layout_marginStart="56dp"
-        app:layout_constraintLeft_toRightOf="@+id/p1_radio1"
         android:layout_marginEnd="16dp"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/p1_botonsig"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/p1_image"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintVertical_bias="0.33" />
+        android:checkedButton="@+id/p1_radio1"
+        android:id="@+id/p1_radiogroup"
+        app:layout_constraintBottom_toTopOf="@+id/p1_botonatras"
+        android:layout_marginBottom="32dp">
+
+        <RadioButton
+            android:text="@string/p1_a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/p1_radio1"
+            android:layout_weight="1" />
+
+        <RadioButton
+            android:text="@string/p1_b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/p1_radio2"
+            android:layout_weight="1" />
+    </RadioGroup>
+
 
     <TextView
         android:text="@string/puntaje"
@@ -108,6 +113,11 @@
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginTop="24dp"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_bias="0.66" />
+        app:layout_constraintHorizontal_bias="0.58"
+        app:layout_constraintBottom_toTopOf="@+id/p1_textpreg"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintVertical_bias="0.18" />
+
+
 
 </android.support.constraint.ConstraintLayout>

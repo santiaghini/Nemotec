@@ -47,9 +47,9 @@ public class CalcActivity extends AppCompatActivity {
 
         public void dividir(View view){
 //convertimos a número los valores introducidos y operamos
-            int n1=Integer.parseInt(oper1.getText().toString());
-            int n2=Integer.parseInt(oper2.getText().toString());
-            int sum=n1/n2;
+            int n1 = Integer.parseInt(oper1.getText().toString());
+            int n2 = Integer.parseInt(oper2.getText().toString());
+            int sum = n1 / n2;
             mostrar(sum);
         }
 

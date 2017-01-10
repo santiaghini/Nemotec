@@ -20,5 +20,7 @@ public class LandingActivity extends AppCompatActivity {
         //putExtra es "llevalo a otra activity. get text obtiene un editable, pero necesitamos un string, por eso .toString
         intent.putExtra("name", name.getText().toString());
         startActivity(intent);
+        Intent intent2 = new Intent(LandingActivity.this, EndActivity.class);
+        intent2.putExtra("name2" , name.getText().toString());
     }
 }
