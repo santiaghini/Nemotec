@@ -9,15 +9,26 @@ import android.widget.Toast;
 
 public class EndActivity extends AppCompatActivity {
 
+    TextView answ;
+    TextView puntfu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_end);
+
+
         String puntos = getIntent().getStringExtra("puntos");
         String name = getIntent().getStringExtra("name2");
         Toast punt = Toast.makeText(getApplicationContext() , name + " obtuviste " + puntos + " puntos" , Toast.LENGTH_LONG);
         punt.show();
+
+
+        answ = (TextView) findViewById(R.id. ea_answ);
+        puntfu = (TextView) findViewById(R.id. ea_puntfu);
+
+        answ.setText(puntos);
+
     }
 
     protected void regresarEnd(View view) {

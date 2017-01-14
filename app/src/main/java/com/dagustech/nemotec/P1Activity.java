@@ -114,6 +114,11 @@ public class P1Activity extends AppCompatActivity {
         } else {
             toastincorrecto.show();
         }
+
+        //else if (opcionelegida == null) {
+        //  toastnecesito.show
+
+
         //
         //preguntaActual = preguntaActual + 1 < listatits.size() ? preguntaActual + 1 : 0 ;
         if (preguntaActual + 1 == listatits.size()){

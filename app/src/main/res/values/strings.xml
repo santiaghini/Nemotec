@@ -46,6 +46,8 @@
     <string name="sig">Siguiente</string>
     <string name="atras">Atrás</string>
     <string name="puntaje">Puntaje actual: 0</string>
+    <string name="puntfu">Tu puntaje fue: </string>
+    <string name="necesito">Necesito tu respuesta</string>
 
 
 </resources>
