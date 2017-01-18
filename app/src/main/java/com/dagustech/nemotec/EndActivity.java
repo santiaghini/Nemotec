@@ -19,15 +19,16 @@ public class EndActivity extends AppCompatActivity {
 
 
         String puntos = getIntent().getStringExtra("puntos");
-        String name = getIntent().getStringExtra("name2");
+        String name = getIntent().getStringExtra("name");
         Toast punt = Toast.makeText(getApplicationContext() , name + " obtuviste " + puntos + " puntos" , Toast.LENGTH_LONG);
-        punt.show();
 
 
         answ = (TextView) findViewById(R.id. ea_answ);
         puntfu = (TextView) findViewById(R.id. ea_puntfu);
 
         answ.setText(puntos);
+
+        puntfu.setText(name + getString(R.string.puntfu));
 
     }
 

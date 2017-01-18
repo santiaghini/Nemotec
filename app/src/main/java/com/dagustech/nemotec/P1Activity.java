@@ -3,6 +3,7 @@ package com.dagustech.nemotec;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -49,7 +50,7 @@ public class P1Activity extends AppCompatActivity {
         radios = (RadioGroup) findViewById(R.id.p1_radiogroup);
 
 
-        String name = getIntent().getStringExtra("name");
+        name = getIntent().getStringExtra("name");
         Toast toast = Toast.makeText(getApplicationContext(),"Iniciaste como "+name,Toast.LENGTH_LONG);
         toast.show();
 
@@ -94,48 +95,59 @@ public class P1Activity extends AppCompatActivity {
 
 
     protected void nextQ (View view) {
+
         Integer clickedradio = radios.getCheckedRadioButtonId();
-        RadioButton clickeado = (RadioButton) findViewById(clickedradio);
-        String opcionelegida = clickeado.getText().toString();
-       // Integer idtext = opcionelegida.;
-        //Toast c = Toast.makeText(getApplicationContext() , "" + clickeado , Toast.LENGTH_SHORT);
-        //c.show();
+        Log.d("radiobuttonid" , "" + clickedradio);
 
-        // clickedradio = clickedradio == listacorrectas.get(preguntaActual) ? conteo + 1 : null;
-        Toast toastcorrecto = Toast.makeText(getApplicationContext(), "¡Correcto!", Toast.LENGTH_SHORT);
-        Toast toastincorrecto = Toast.makeText(getApplicationContext(), "Incorrecto", Toast.LENGTH_SHORT);
-        String id = listacorrectas.get(preguntaActual);
+        if (clickedradio != -1) {
+
+            RadioButton clickeado = (RadioButton) findViewById(clickedradio);
+            String opcionelegida = clickeado.getText().toString();
+            // Integer idtext = opcionelegida.;
+            //Toast c = Toast.makeText(getApplicationContext() , "" + clickeado , Toast.LENGTH_SHORT);
+            //c.show();
+
+            // clickedradio = clickedradio == listacorrectas.get(preguntaActual) ? conteo + 1 : null;
+            Toast toastcorrecto = Toast.makeText(getApplicationContext(), "¡Correcto!", Toast.LENGTH_SHORT);
+            Toast toastincorrecto = Toast.makeText(getApplicationContext(), "Incorrecto", Toast.LENGTH_SHORT);
+            String id = listacorrectas.get(preguntaActual);
 
 
+            if (opcionelegida == id) {
+                conteo = conteo + 1;
+                toastcorrecto.show();
+            } else {
+                toastincorrecto.show();
+            }
 
-        if (opcionelegida == id ) {
-            conteo = conteo + 1 ;
-            toastcorrecto.show();
+            //else if (opcionelegida == null) {
+            //  toastnecesito.show
+
+
+            //
+            //preguntaActual = preguntaActual + 1 < listatits.size() ? preguntaActual + 1 : 0 ;
+            if (preguntaActual + 1 == listatits.size()) {
+                Intent intent = new Intent(P1Activity.this, EndActivity.class);
+                intent.putExtra("puntos", "" + conteo);
+                intent.putExtra("name" , name);
+                startActivity(intent);
+
+            } else {
+                preguntaActual = preguntaActual + 1;
+                tit.setText(listatits.get(preguntaActual));
+                preg.setText(listapreguntas.get(preguntaActual));
+                opcA.setText(listaopca.get(preguntaActual));
+                opcB.setText(listaopcb.get(preguntaActual));
+                image.setImageResource(listaimages.get(preguntaActual));
+                puntaje.setText("Puntaje actual: " + conteo);
+                radios.clearCheck();
+            }
+
         } else {
-            toastincorrecto.show();
+            Toast falla = Toast.makeText(getApplicationContext() , getString(R.string.necesito) , Toast.LENGTH_SHORT );
+            falla.show();
         }
 
-        //else if (opcionelegida == null) {
-        //  toastnecesito.show
-
-
-        //
-        //preguntaActual = preguntaActual + 1 < listatits.size() ? preguntaActual + 1 : 0 ;
-        if (preguntaActual + 1 == listatits.size()){
-            Intent intent = new Intent(P1Activity.this, EndActivity.class);
-            intent.putExtra("puntos", "" + conteo);
-            startActivity(intent);
-
-        } else {
-            preguntaActual = preguntaActual + 1;
-            tit.setText(listatits.get(preguntaActual));
-            preg.setText(listapreguntas.get(preguntaActual));
-            opcA.setText(listaopca.get(preguntaActual));
-            opcB.setText(listaopcb.get(preguntaActual));
-            image.setImageResource(listaimages.get(preguntaActual));
-            puntaje.setText("Puntaje actual: " + conteo);
-            radios.clearCheck();
-        }
 
 
 
