@@ -35,7 +35,7 @@ public class LandingActivity extends AppCompatActivity {
 
     public void peticion() {
         RequestQueue queue = Volley.newRequestQueue(this);
-        String url = "https://www.google.com.mx/";
+        String url = "http://54.157.44.249/estudiantes";
         StringRequest request = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -50,6 +50,7 @@ public class LandingActivity extends AppCompatActivity {
             }
         });
         queue.add(request);
+
 
     }
 }
