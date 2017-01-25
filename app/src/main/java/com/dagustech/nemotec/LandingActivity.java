@@ -11,8 +11,15 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonArrayRequest;
+import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+
+import java.lang.reflect.Array;
 
 public class LandingActivity extends AppCompatActivity {
 
@@ -36,10 +43,15 @@ public class LandingActivity extends AppCompatActivity {
     public void peticion() {
         RequestQueue queue = Volley.newRequestQueue(this);
         String url = "http://54.157.44.249/estudiantes";
-        StringRequest request = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
+        JsonArrayRequest request = new JsonArrayRequest(Request.Method.GET, url, null , new Response.Listener<JSONArray>() {
             @Override
-            public void onResponse(String response) {
-                Log.d("response", response);
+            public void onResponse(JSONArray response) {
+                for (int contador = 0 ; contador < response.length() ; contador ++) {
+                   try {Log.d("elemento" , response.get(contador).toString() );}
+                    catch (JSONException exception) {Log.e("exception" , "Hubo una excepción");}
+
+                }
+
             }
 
         }
